@@ -36,15 +36,38 @@ header {
 
 .title {
   margin: 118px 0 32px;
+
+  @media(max-width: 767.98px) {
+    margin: 32px 0;
+  }
 }
 
 .btn-headerInfo {
   border-radius: 15px;
   background-color: transparent;
-  margin: 72px 0 0;
+  margin: 72px 12px 0;
   padding: 13px 90px 16px;
+  width: none;
 
   &:hover {
     color: black;
   }
+
+  @media(max-width: 767.98px) {
+    margin: 32px 12px 10px;
+    padding: 13px 30px 16px;
+  }
+
+  @media(min-width: 320.98px) {
+    width: 50%;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: white;
+  border-color: white;
+}
+
+.navLink {
+  color: white !important;
 }
