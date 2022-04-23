@@ -1,0 +1,50 @@
+$container-max-widths: (
+  sm: 440px,
+  md: 720px,
+  lg: 960px,
+  xl: 1240px,
+);
+
+@import "~bootstrap/scss/bootstrap";
+@import "./assets/styles/_fonts.scss";
+
+h1 {
+  font-size: 50px;
+  font-family: "NotoSans-Bold" ;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px;
+}
+
+p {
+  font-family: "NotoSans-Regular";
+  font-size: 15px;
+  line-height: 20px;
+}
+
+header {
+  padding: 19px 0 0;
+}
+
+.header {
+  height: 686px;
+  width: 100%;
+  background-image: url("./assets/img/mainPhoto.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  margin: 118px 0 32px;
+}
+
+.btn-headerInfo {
+  border-radius: 15px;
+  background-color: transparent;
+  margin: 72px 0 0;
+  padding: 13px 90px 16px;
+
+  &:hover {
+    color: black;
+  }
+}
