@@ -2,7 +2,7 @@ $container-max-widths: (
   sm: 440px,
   md: 720px,
   lg: 960px,
-  xl: 1240px,
+  xl: 1264px,
 );
 $form-select-box-shadow: none;
 $form-select-focus-box-shadow: none;
@@ -92,8 +92,7 @@ header {
   }
 }
 
-.form-select-col,
-.container-formSelect {
+.form-select-col {
   padding: 0;
 }
 
@@ -130,7 +129,7 @@ header {
     width: auto;
     border: none;
     background-image: none;
-    padding: 0;
+    // padding: 0;
     align-items: flex-start;
   }
 }
@@ -226,4 +225,14 @@ header {
 
 h4 {
   font-size: 25px;
+}
+
+footer {
+  background: black;
+  padding: 35px 0;
+}
+
+.footer {
+  padding: 35px 0;
+  justify-content: space-between;
 }

@@ -7,6 +7,8 @@ import facebook from './assets/img/facebook.svg';
 import sortBy from './assets/img/sortBy.svg';
 import vwTiguan from './assets/img/cars/vw-tiguan.svg';
 
+import Questions from './components/Questions';
+
 import { Button, Row, Col, Container, Nav, Navbar, Form, Card, InputGroup, FormControl } from 'react-bootstrap';
 
 
@@ -236,7 +238,7 @@ function App() {
                   className="subscription__input"
                 />
                 <Button variant="outline-secondary" id="button-addon2" className="subscription__btn">
-                Subscribe now
+                  Subscribe now
                 </Button>
               </InputGroup>
             </Col>
@@ -249,6 +251,35 @@ function App() {
           <h1 className="title-sections text-center">POPULAR QUESTIONS</h1>
         </Row>
       </Container>
+
+      <Questions />
+
+      <footer>
+        <Container>
+          <Row className="pt-1 footer">
+
+            <Col>
+              <img className="logo-img" src={logo} alt="logo" />
+            </Col>
+
+            <Col className="justify-content-center">
+              <Nav>
+                <Nav.Link className="navLink" href="/home" eventKey="Inventory">Inventory</Nav.Link>
+                <Nav.Link className="navLink" eventKey="Financing">Financing</Nav.Link>
+                <Nav.Link className="navLink" eventKey="Contacts">Contacts</Nav.Link>
+              </Nav>
+            </Col>
+
+            <Col className="justify-content-end">
+              <Nav>
+                <Nav.Link className="navLink" eventKey="instagram"><img src={instagram} alt="instagram" /></Nav.Link>
+                <Nav.Link className="navLink" eventKey="facebook"><img src={facebook} alt="facebook" /></Nav.Link>
+              </Nav>
+            </Col>
+
+          </Row>
+        </Container>
+      </footer>
 
     </div>
   );
