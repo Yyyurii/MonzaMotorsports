@@ -7,7 +7,7 @@ import facebook from './assets/img/facebook.svg';
 import sortBy from './assets/img/sortBy.svg';
 import vwTiguan from './assets/img/cars/vw-tiguan.svg';
 
-import { Button, Row, Col, Container, Nav, Navbar, Form, Card, CardGroup } from 'react-bootstrap';
+import { Button, Row, Col, Container, Nav, Navbar, Form, Card, InputGroup, FormControl } from 'react-bootstrap';
 
 
 function App() {
@@ -73,7 +73,7 @@ function App() {
 
       <Container>
         <Row>
-          <h1 className="title-currentOffers text-center">CURRENT OFFERS</h1>
+          <h1 className="title-sections text-center">CURRENT OFFERS</h1>
         </Row>
       </Container>
 
@@ -143,81 +143,111 @@ function App() {
 
       <Container className="products">
 
-          <Card className="card">
+        <Card className="card">
+          <Card.Img variant="top" src={vwTiguan} className="card__img" />
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
             <Card.Img variant="top" src={vwTiguan} className="card__img" />
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_new">New</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_sold">SOLD</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_sold">SOLD</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_sold">SOLD</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_sold">SOLD</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card className="card">
-            <div className="card__header">
-              <Card.Img variant="top" src={vwTiguan} className="card__img" />
-              <div className="card__label_sold">SOLD</div>
-            </div>
-            <Card.Body>
-              <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-              <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-              <Card.Text className="card__price">$34,888</Card.Text>
-            </Card.Body>
-          </Card>
+            <div className="card__label_new">New</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
+            <Card.Img variant="top" src={vwTiguan} className="card__img" />
+            <div className="card__label_sold">SOLD</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
+            <Card.Img variant="top" src={vwTiguan} className="card__img" />
+            <div className="card__label_sold">SOLD</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
+            <Card.Img variant="top" src={vwTiguan} className="card__img" />
+            <div className="card__label_sold">SOLD</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
+            <Card.Img variant="top" src={vwTiguan} className="card__img" />
+            <div className="card__label_sold">SOLD</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
+        <Card className="card">
+          <div className="card__header">
+            <Card.Img variant="top" src={vwTiguan} className="card__img" />
+            <div className="card__label_sold">SOLD</div>
+          </div>
+          <Card.Body>
+            <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
+            <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
+            <Card.Text className="card__price">$34,888</Card.Text>
+          </Card.Body>
+        </Card>
 
+      </Container>
+
+      <section className="subscription">
+        <Container>
+          <Row className="align-items-center">
+            <Col className="subscription__text">
+              <h4>Haven't found a suitable vehicle?</h4><br />
+              <p>Sign up for our newsletter and be the first to know when we publish new vehicle offers.</p>
+            </Col>
+            <Col>
+              <InputGroup className="mb-3">
+                <FormControl
+                  placeholder="Enter your email"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                  className="subscription__input"
+                />
+                <Button variant="outline-secondary" id="button-addon2" className="subscription__btn">
+                Subscribe now
+                </Button>
+              </InputGroup>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <Container>
+        <Row>
+          <h1 className="title-sections text-center">POPULAR QUESTIONS</h1>
+        </Row>
       </Container>
 
     </div>

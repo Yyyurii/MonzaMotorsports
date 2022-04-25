@@ -76,7 +76,7 @@ header {
   color: white !important;
 }
 
-.title-currentOffers {
+.title-sections {
   color: #aeaeae;
   margin: 100px 0 80px;
 }
@@ -92,7 +92,8 @@ header {
   }
 }
 
-.form-select-col, .container-formSelect {
+.form-select-col,
+.container-formSelect {
   padding: 0;
 }
 
@@ -135,7 +136,6 @@ header {
 }
 
 .products {
-  padding: 0 0 500px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -200,4 +200,30 @@ header {
     font-weight: 500;
     margin: 26px 0 35px;
   }
+}
+
+.subscription {
+  padding: 40px 100px;
+  margin: 120px auto 0;
+  background: black;
+  color: white;
+
+  &__input {
+    background: black;
+    color: white;
+    margin: 0 20px 0;
+    border-radius: 15px;
+    padding: 15px 22px 19px 16px;
+  }
+
+  &__btn {
+    border-radius: 15px;
+    padding: 16px 40px;
+    background: white;
+    color: black;
+  }
+}
+
+h4 {
+  font-size: 25px;
 }
