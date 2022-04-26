@@ -1,0 +1,52 @@
+.btn-selectForm {
+  background: #df4e3c;
+  width: 100%;
+  height: 48px;
+
+  &:hover {
+    color: #df4e3c;
+    background: transparent;
+  }
+}
+
+.form-select-col {
+  padding: 0;
+}
+
+.formSelect {
+  border-radius: 15px;
+  height: 48px;
+}
+
+.formSelect-row {
+  margin: 0 0 25px;
+  gap: 20px;
+  @media (max-width: 979.98px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.formCheck {
+  // padding-left: 2.5em;
+  margin: 0 0 25px;
+}
+
+.sort {
+  display: flex;
+
+  &__label {
+    img {
+      margin: 0 8px 0 16px;
+    }
+  }
+
+  &__formSelect {
+    display: flex;
+    width: auto;
+    border: none;
+    background-image: none;
+    padding: 0;
+    align-items: flex-start;
+  }
+}

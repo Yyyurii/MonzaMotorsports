@@ -1,0 +1,60 @@
+.card {
+  border: none;
+
+  &__header {
+    position: relative;
+    max-width: 295px;
+  }
+
+  &__label {
+    &_new {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      height: 24px;
+      width: 67px;
+      background: black;
+      color: white;
+      border-radius: 0 15px 15px 0;
+      font-size: 12px;
+    }
+
+    &_sold {
+      position: absolute;
+      font-family: "Poppins-Bold";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 75px;
+      color: white;
+      width: 100%;
+      top: 50px;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    width: 295px;
+  }
+
+  &__title {
+    font-size: 17px;
+    margin: 20px 0 16px;
+  }
+
+  &__subtitle {
+    color: #8d8d8d;
+  }
+
+  &__params {
+    color: #8d8d8d;
+    font-size: 14px;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 26px 0 35px;
+  }
+}
