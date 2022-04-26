@@ -1,42 +1,35 @@
+import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 import './cardsItem.scss';
 
-import vwTiguan from '../../assets/img/cars/vw-tiguan.svg';
+import CardsItemInfo from './CardsItemInfo';
 
 function CardsItem() {
+
+  const [cardInfo, setCardInfo] = useState(CardsItemInfo);
+
   return (
     <>
-      <Card className="card">
-        <Card.Img variant="top" src={vwTiguan} className="card__img" />
-        <Card.Body>
-          <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-          <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-          <Card.Text className="card__price">$34,888</Card.Text>
-        </Card.Body>
-      </Card>
-      <Card className="card">
-        <div className="card__header">
-          <Card.Img variant="top" src={vwTiguan} className="card__img" />
-          <div className="card__label_new">New</div>
-        </div>
-        <Card.Body>
-          <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-          <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-          <Card.Text className="card__price">$34,888</Card.Text>
-        </Card.Body>
-      </Card>
-      <Card className="card">
-        <div className="card__header">
-          <Card.Img variant="top" src={vwTiguan} className="card__img" />
-          <div className="card__label_sold">SOLD</div>
-        </div>
-        <Card.Body>
-          <Card.Title className="card__title"><span className="card__subtitle">2019</span> Volkswagen Tiguan</Card.Title>
-          <Card.Text className="card__params">19,855 km | Automatic | Diesel</Card.Text>
-          <Card.Text className="card__price">$34,888</Card.Text>
-        </Card.Body>
-      </Card>
+      {
+        cardInfo.map(item => {
+          const { id, img, year, make, model, trim, mileage, price, label } = item;
+          return (
+            <Card className="card" key={id}>
+              <div className="card__header">
+                <Card.Img variant="top" src={img} className="card__img" />
+                <div className="card__label_new" style={label === 'new' ? { display: 'block' } : { display: 'none' }}>New</div>
+                <div className="card__label_sold" style={label === 'sold' ? { display: 'block' } : { display: 'none' }}>SOLD</div>
+              </div>
+              <Card.Body>
+                <Card.Title className="card__title"><span className="card__subtitle">{year}</span> {make} {model} {trim}</Card.Title>
+                <Card.Text className="card__params">{mileage} km | Automatic | Diesel</Card.Text>
+                <Card.Text className="card__price">${price}</Card.Text>
+              </Card.Body>
+            </Card>
+          )
+        })
+      }
     </>
   )
 }
