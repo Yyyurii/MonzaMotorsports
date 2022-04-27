@@ -2,7 +2,7 @@ const CardsItemInfo = [
   {
     id: 1,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2019,
+    year: '2019',
     make: 'volkswagen',
     model: 'tiguan',
     trim: null,
@@ -13,7 +13,7 @@ const CardsItemInfo = [
   {
     id: 2,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2014,
+    year: '2014',
     make: 'toyota',
     model: 'highlander',
     trim: 'XLE',
@@ -24,7 +24,7 @@ const CardsItemInfo = [
   {
     id: 3,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2017,
+    year: '2017',
     make: 'lexus',
     model: 'rx 350',
     trim: 'LUXURY',
@@ -35,7 +35,7 @@ const CardsItemInfo = [
   {
     id: 4,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2016,
+    year: '2016',
     make: 'toyota',
     model: 'highlander',
     trim: 'LE',
@@ -46,7 +46,7 @@ const CardsItemInfo = [
   {
     id: 5,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2017,
+    year: '2017',
     make: 'hyundai',
     model: 'elantra',
     trim: null,
@@ -57,7 +57,7 @@ const CardsItemInfo = [
   {
     id: 6,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2016,
+    year: '2016',
     make: 'mercedes-benz',
     model: 'gle',
     trim: null,
@@ -68,7 +68,7 @@ const CardsItemInfo = [
   {
     id: 7,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2017,
+    year: '2017',
     make: 'toyota',
     model: 'venza',
     trim: 'AWD',
@@ -79,7 +79,7 @@ const CardsItemInfo = [
   {
     id: 8,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2016,
+    year: '2016',
     make: 'lexus',
     model: 'rx 350',
     trim: 'F-SPORT',
@@ -90,7 +90,7 @@ const CardsItemInfo = [
   {
     id: 9,
     img: require("../assets/img/cars/vw-tiguan.svg").default,
-    year: 2015,
+    year: '2015',
     make: 'toyota',
     model: 'venza',
     trim: 'XLE',

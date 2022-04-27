@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 import './cardsItem.scss';
 
 function CardsItem(props) {
 
-  const [cardInfo, setCardInfo] = useState(props.CardsItemInfo);
-  
+  const [cardInfo, setCardInfo] = useState(props.cardsItemInfo);
+
+  useEffect(() => {
+    setCardInfo(props.cardsItemInfo)
+  }, [props.cardsItemInfo]);
   return (
     <>
       {

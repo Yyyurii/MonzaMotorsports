@@ -7,9 +7,7 @@ import sortBy from '../../assets/img/sortBy.svg';
 
 function Filters(props) {
 
-  console.log(props)
-
-  let { year, make, model, trim, mileage } = props;
+  let { year, make, model, trim, handleYear } = props;
 
   year = Array.from(props.filters.year);
   make = Array.from(props.filters.make);
@@ -20,14 +18,18 @@ function Filters(props) {
     <Container className="container-formSelect">
       <Row className="formSelect-row">
         <Col className="form-select-col">
-          <Form.Select aria-label="Default select example" className="formSelect" data-size="5">
+          <Form.Select 
+            aria-label="Default select example" 
+            className="formSelect" 
+            data-size="5"
+            onChange={(e) => handleYear(e.target.value)}>
             <option>Year</option>
             {
               year.map((year, index) => {
                 return (
                   <option
                     key={index}
-                    value={year}>
+                    value={year} >
                     {year}
                   </option>
                 )

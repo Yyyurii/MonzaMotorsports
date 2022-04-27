@@ -10,7 +10,7 @@ function Cards(props) {
     <Container className="cards">
 
       <CardsItem
-        CardsItemInfo={props.CardsItemInfo} />
+        cardsItemInfo={props.cardsItemInfo} />
 
     </Container>
   )
