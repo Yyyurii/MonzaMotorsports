@@ -3,12 +3,10 @@ import { Card } from 'react-bootstrap';
 
 import './cardsItem.scss';
 
-import CardsItemInfo from './CardsItemInfo';
+function CardsItem(props) {
 
-function CardsItem() {
-
-  const [cardInfo, setCardInfo] = useState(CardsItemInfo);
-
+  const [cardInfo, setCardInfo] = useState(props.CardsItemInfo);
+  
   return (
     <>
       {

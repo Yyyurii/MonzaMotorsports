@@ -1,53 +1,94 @@
+import { useState } from 'react';
 import { Button, Row, Col, Container, Form } from 'react-bootstrap';
 
 import './filters.scss';
 
 import sortBy from '../../assets/img/sortBy.svg';
 
-function Filters() {
+function Filters(props) {
+
+  console.log(props)
+
+  let { year, make, model, trim, mileage } = props;
+
+  year = Array.from(props.filters.year);
+  make = Array.from(props.filters.make);
+  model = Array.from(props.filters.model);
+  trim = Array.from(props.filters.trim);
 
   return (
-
     <Container className="container-formSelect">
       <Row className="formSelect-row">
         <Col className="form-select-col">
           <Form.Select aria-label="Default select example" className="formSelect" data-size="5">
             <option>Year</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              year.map((year, index) => {
+                return (
+                  <option
+                    key={index}
+                    value={year}>
+                    {year}
+                  </option>
+                )
+              })
+            }
           </Form.Select>
         </Col>
         <Col className="form-select-col">
           <Form.Select aria-label="Default select example" className="formSelect">
             <option>Make</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              make.map((make, index) => {
+                return (
+                  <option
+                    key={index}
+                    value={make}>
+                    {make}
+                  </option>
+                )
+              })
+            }
           </Form.Select>
         </Col>
         <Col className="form-select-col">
           <Form.Select aria-label="Default select example" className="formSelect">
             <option>Model</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              model.map((model, index) => {
+                return (
+                  <option
+                    key={index}
+                    value={model}>
+                    {model}
+                  </option>
+                )
+              })
+            }
           </Form.Select>
         </Col>
         <Col className="form-select-col">
           <Form.Select aria-label="Default select example" className="formSelect">
             <option>Trim</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              trim.map((trim, index) => {
+                return (
+                  <option
+                    key={index}
+                    value={trim}>
+                    {trim}
+                  </option>
+                )
+              })
+            }
           </Form.Select>
         </Col>
         <Col className="form-select-col">
           <Form.Select aria-label="Default select example" className="formSelect">
             <option>Mileage</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">&gt; 10,000</option>
+            <option value="2">&gt; 50,000</option>
+            <option value="3">&gt; 100,000</option>
           </Form.Select>
         </Col>
         <Col className="form-select-col col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">

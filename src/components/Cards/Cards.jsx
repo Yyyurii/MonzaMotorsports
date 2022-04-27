@@ -2,13 +2,15 @@ import { Container } from 'react-bootstrap';
 
 import './cards.scss';
 
-import CardsItem from '../CardsItem';
+import CardsItem from '../CardsItem/CardsItem';
 
-function Cards() {
+function Cards(props) {
+
   return (
     <Container className="cards">
 
-      <CardsItem />
+      <CardsItem
+        CardsItemInfo={props.CardsItemInfo} />
 
     </Container>
   )
